@@ -19,3 +19,6 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 3.4.shaders_class_exercise1
 >       - 3.5.shaders_class_exercise2
 >       - 3.6.shaders_class_exercise3
+
+### 说明
+本项目仅供交流学习，不可用于其他用途，如果有人愿意提供宝贵的意见或建议，可联系本人，个人邮箱：850989926@qq.com（QQ）
