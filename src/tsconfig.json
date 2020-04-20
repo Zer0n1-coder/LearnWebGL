@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "AMD",
+    "target": "ES6",
+    "lib": [ "es6", "DOM" ],
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
