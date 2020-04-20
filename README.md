@@ -5,7 +5,7 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 **英文教程**：[learnopengl](https://learnopengl.com/)
 **中文教程**：[learnopengl](https://learnopengl-cn.github.io/)
 
-###当前进度：
+当前进度：
 >- src
 >   - 1.getting started
 >       - 1.2.hello_window_clear
