@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>LearnWebGL</title>
+    <style type="text/css">
+        .container {
+            margin: 0 auto;
+            width: 800px;
+        }
+    </style>
+    <script src="../../require.js" type="text/javascript"></script>
+    <script id="vs" type="x-shader/x-vertex">
+        attribute vec3 aPos;
+        attribute vec3 aColor;
+        attribute vec2 aTexCoord;
+        varying vec3 ourColor;
+        varying vec2 texCoord;
+
+        void main()
+        {
+        gl_Position = vec4(aPos,1.0);
+        ourColor = aColor;
+        texCoord = vec2(aTexCoord.x,1.0-aTexCoord.y);   //原教程中是直接转换图片读取的坐标，这里由于没有这项功能，所以选择颠倒纹理y坐标，可以达到同样效果（练习题1就是类似原理）
+        }
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+        precision mediump float;
+        #endif
+
+        uniform sampler2D texture1;
+        uniform sampler2D texture2;
+        varying vec3 ourColor;
+        varying vec2 texCoord;
+
+        void main()
+        {
+        gl_FragColor = mix(texture2D(texture1, texCoord), texture2D(texture2, texCoord), 0.2);
+        }
+    </script>
+</head>
+
+<body>
+    <img id="container" src="https://learnopengl-cn.github.io/img/01/06/container.jpg" crossOrigin="anonymous" style="display :none" />
+    <img id="awesomeface" src="https://learnopengl-cn.github.io/img/01/06/awesomeface.png" crossOrigin="anonymous" style="display :none" />
+    <div class="container">
+        <canvas id="webgl" width="800" height="600" align="center">
+            Please use a browser that supports "canvas"
+        </canvas>
+    </div>
+    <script type="text/javascript">
+        require.config({
+            baseUrl: '.',
+            paths: {
+            }
+        });
+
+        require(['main'], function (exports) {
+            exports.main();
+        });
+    </script>
+</body>
+</html>
