@@ -2,7 +2,7 @@
 learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescript的组合对该教程教学内容进行实现，方便仅会前端语言的图形学爱好者学习交流。由于本人并不是从事前端工作，对前端语言不够了解，所以部分代码编写得不够完美，欢迎大家指点交流。本项目力求使用webgl+typescript还原教程中opengl+cpp的代码，尽可能做到内容的差异仅来自于语言的差异。目前正努力施工中……
 
 **英文教程**：[learnopengl](https://learnopengl.com/)
-**中文教程**：[learnopengl](https://learnopengl-cn.github.io/)
+**中文教程**：[learnopengl-cn](https://learnopengl-cn.github.io/)
 
 ### 当前进度：
 >- src
@@ -19,6 +19,7 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 3.4.shaders_class_exercise1
 >       - 3.5.shaders_class_exercise2
 >       - 3.6.shaders_class_exercise3
+>       - 4.1.textures
 
 ### 说明
 本项目仅供交流学习，不可用于其他用途，如果有人愿意提供宝贵的意见或建议，可联系本人，个人邮箱：850989926@qq.com（QQ）
