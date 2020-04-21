@@ -1,5 +1,5 @@
 ## LearnWebGL
-learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescript的组合对该教程教学内容进行实现，方便仅会前端语言的图形学爱好者学习交流。由于本人并不是从事前端工作，对前端语言不够了解，所以部分代码编写得不够完美，欢迎大家指点交流。本项目力求使用webgl+typescript还原教程中opengl+cpp的代码，尽可能做到内容的差异仅来自于语言的差异。目前正努力施工中……
+learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescript的组合对该教程教学内容进行实现，方便仅会前端语言的图形学爱好者或者想接触webgl的程序猿学习交流。由于本人并不是从事前端工作，对前端语言不够了解，所以部分代码编写得不够完美，欢迎大家指点交流。本项目力求使用webgl+typescript还原教程中opengl+cpp的代码，尽可能做到内容的差异仅来自于语言的差异。目前正努力施工中……
 
 **英文教程**：[learnopengl](https://learnopengl.com/)
 **中文教程**：[learnopengl-cn](https://learnopengl-cn.github.io/)
