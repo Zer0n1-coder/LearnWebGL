@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>LearnWebGL</title>
+    <style type="text/css">
+        .container {
+            margin: 0 auto;
+            width: 800px;
+        }
+    </style>
+    <script id="colorsVs" type="x-shader/x-vertex">
+        attribute vec3 aPos;
+
+        uniform mat4 model;
+        uniform mat4 view;
+        uniform mat4 projection;
+
+        void main()
+        {
+        gl_Position = projection* view * model * vec4( aPos, 1.0);
+        }
+    </script>
+    <script id="colorsFs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+        precision mediump float;
+        #endif
+
+        uniform vec3 objectColor;
+        uniform vec3 lightColor;
+
+        void main()
+        {
+        gl_FragColor = vec4(lightColor * objectColor,1.0);
+        }
+    </script>
+    <script id="lampVs" type="x-shader/x-vertex">
+        attribute vec3 aPos;
+
+        uniform mat4 model;
+        uniform mat4 view;
+        uniform mat4 projection;
+
+        void main()
+        {
+        gl_Position = projection* view * model * vec4( aPos, 1.0);
+        }
+    </script>
+    <script id="lampFs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+        precision mediump float;
+        #endif
+
+        void main()
+        {
+        gl_FragColor = vec4(1.0);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="webgl" width="800" height="600" align="center">
+            Please use a browser that supports "canvas"
+        </canvas>
+    </div>
+    <script type="module">
+        import { main } from './main.js'
+        main();
+    </script>
+</body>
+</html>
