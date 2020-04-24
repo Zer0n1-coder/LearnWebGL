@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>LearnWebGL</title>
+    <style type="text/css">
+        .container {
+            margin: 0 auto;
+            width: 800px;
+        }
+    </style>
+    <script id="colorsVs" type="x-shader/x-vertex">
+        attribute vec3 aPos;
+        attribute vec3 aNormal;
+        attribute vec2 aTexCoords;
+
+        varying vec3 FragPos;
+        varying vec3 Normal;
+        varying vec2 TexCoords;
+
+        uniform mat4 changeMat;
+        uniform mat4 model;
+        uniform mat4 view;
+        uniform mat4 projection;
+
+        void main()
+        {
+        FragPos = vec3(model * vec4( aPos, 1.0));
+        Normal = mat3(changeMat)*aNormal;
+        TexCoords = aTexCoords;
+
+        gl_Position = projection* view * model * vec4( aPos, 1.0);
+        }
+    </script>
+    <script id="colorsFs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+        precision mediump float;
+        #endif
+
+        struct Material {
+        sampler2D diffuse;
+        sampler2D specular;
+        float shininess;
+        };
+
+        struct Light {
+        vec3 position;
+
+        vec3 ambient;
+        vec3 diffuse;
+        vec3 specular;
+
+        float constant;
+        float linear;
+        float quadratic;
+        };
+
+        varying vec3 FragPos;
+        varying vec3 Normal;
+        varying vec2 TexCoords;
+
+        uniform vec3 viewPos;
+        uniform Material material;
+        uniform Light light;
+
+        void main()
+        {
+        // ambient
+        vec3 ambient = light.ambient * texture2D(material.diffuse, TexCoords).rgb;
+
+        // diffuse
+        vec3 norm = normalize(Normal);
+        vec3 lightDir = normalize(light.position - FragPos);
+        float diff = max(dot(norm, lightDir), 0.0);
+        vec3 diffuse = light.diffuse * diff * texture2D(material.diffuse, TexCoords).rgb;
+
+        // specular
+        vec3 viewDir = normalize(viewPos - FragPos);
+        vec3 reflectDir = reflect(-lightDir, norm);
+        float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
+        vec3 specular = light.specular * (spec * texture2D(material.specular, TexCoords).rgb);
+
+        // attenuation
+        float distance    = length(light.position - FragPos);
+        float attenuation = 1.0 / (light.constant + light.linear * distance + light.quadratic * (distance * distance));
+
+        ambient  *= attenuation;
+        diffuse   *= attenuation;
+        specular *= attenuation;
+
+        vec3 result = ambient + diffuse + specular;
+
+        gl_FragColor = vec4(result, 1.0);
+        }
+    </script>
+    <script id="lampVs" type="x-shader/x-vertex">
+        attribute vec3 aPos;
+
+        uniform mat4 model;
+        uniform mat4 view;
+        uniform mat4 projection;
+
+        void main()
+        {
+        gl_Position = projection* view * model * vec4( aPos, 1.0);
+        }
+    </script>
+    <script id="lampFs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+        precision mediump float;
+        #endif
+
+        void main()
+        {
+        gl_FragColor = vec4(1.0);
+        }
+    </script>
+</head>
+
+<body>
+    <img id="container2" src="./container2.png" style="display :none" />
+    <img id="container2_specular" src="./container2_specular.png" style="display :none" />
+    <img id="matrix" src="./matrix.jpg" style="display :none" />
+    <div class="container">
+        <canvas id="webgl" width="800" height="600" align="center">
+            Please use a browser that supports "canvas"
+        </canvas>
+    </div>
+    <script type="module">
+        import { main } from './main.js'
+        main();
+    </script>
+</body>
+</html>
