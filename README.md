@@ -53,7 +53,13 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 5.4.light_casters_spot_soft
 >       - 6.multiple_lights
 >   - 3.model_loading
->       - 1.model_loading(为了之后加载obj模型，我用typescript写了一个只针对该教程中obj格式文件的解析库)
+>       - 1.model_loading(为了之后加载obj模型，我用typescript写了一个只针对该教程中obj格式文件的解析函数)
+>   - 4.advanced_opengl
+>       - 1.1.depth_testing
+>       - 1.2.depth_testing_view
+>       - 2.stencil_testing
+>       - 3.1.blending_discard
+>       - 3.2.blending_sort
 
 ### 说明
 本项目仅供交流学习，不可用于其他用途，如果有人愿意提供宝贵的意见或建议，可联系本人，个人邮箱：850989926@qq.com（QQ）
