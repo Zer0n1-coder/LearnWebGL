@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>LearnWebGL</title>
+    <style type="text/css">
+        .container {
+            margin: 0 auto;
+            width: 1280px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="right" src="./skybox/right.jpg" style="display :none" />
+    <img id="left" src="./skybox/left.jpg" style="display :none" />
+    <img id="top" src="./skybox/top.jpg" style="display :none" />
+    <img id="bottom" src="./skybox/bottom.jpg" style="display :none" />
+    <img id="front" src="./skybox/front.jpg" style="display :none" />
+    <img id="back" src="./skybox/back.jpg" style="display :none" />
+    <div class="container">
+        <canvas id="webgl" width="1280" height="720" align="center">
+            Please use a browser that supports "canvas"
+        </canvas>
+    </div>
+    <script type="module">
+        import { main } from './main.js'
+        main();
+    </script>
+</body>
+</html>
