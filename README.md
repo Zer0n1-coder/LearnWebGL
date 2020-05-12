@@ -1,13 +1,13 @@
-## LearnWebGL
+# LearnWebGL
 learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescript的组合对该教程教学内容进行实现，方便仅会前端语言的图形学爱好者或者想接触webgl的程序猿学习交流。由于本人并不是从事前端工作，对前端语言不够了解，所以部分代码编写得不够完美，欢迎大家指点交流。本项目力求使用webgl+typescript还原教程中opengl+cpp的代码，尽可能做到内容的差异仅来自于语言的差异。目前正努力施工中……
   
 **英文教程**：[learnopengl](https://learnopengl.com/)  
 **中文教程**：[learnopengl-cn](https://learnopengl-cn.github.io/)
   
-### 近况
+## 近况
 进度过半，发现webgl-1.0的不完备已经严重影响到本项目的完整性（项目初期没有意识到webgl 1.0版本和2.0版本的问题），所以现在决定暂时停止向后更新，先使用webgl-2.0重构完之前的代码之后再继续更新。不过，根据对webgl-2.0的了解，仍有一些opengl的功能该版本未支持，比如几何着色器。之后我会做考量，要么选择替代技术，要么直接放弃，谅解。  
   
-### 当前进度：
+## 当前进度：
 >- src
 >   - 1.getting started
 >       - 1.2.hello_window_clear
@@ -64,5 +64,5 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 3.1.blending_discard
 >       - 3.2.blending_sort
 
-### 说明
+## 说明
 本项目仅供交流学习，不可用于其他用途，如果有人愿意提供宝贵的意见或建议，可联系本人，个人邮箱：850989926@qq.com（QQ）
