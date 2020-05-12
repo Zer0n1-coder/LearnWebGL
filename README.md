@@ -23,21 +23,21 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 3.5.shaders_class_exercise2
 >       - 3.6.shaders_class_exercise3
 >       - 4.1.textures
->       - 4.2.
->       - 4.3.
->       - 4.4.
->       - 4.5.
->       - 4.6.
->       - 5.1.
->       - 5.2.
->       - 5.3.
->       - 6.1.
->       - 6.2.
->       - 6.3.
->       - 6.4.
->       - 7.1.
->       - 7.2.
->       - 7.4.
+>       - 4.2.textures_combined
+>       - 4.3.textures_exercise1
+>       - 4.4.textures_exercise2
+>       - 4.5.textures_exercise3
+>       - 4.6.textures_exercise4
+>       - 5.1.transformations
+>       - 5.2.transformations_exercise1
+>       - 5.3.transformations_exercise2
+>       - 6.1.coordinate_systems
+>       - 6.2.coordinate_systems_depth
+>       - 6.3.coordinate_systems_exercise3
+>       - 6.4.coordinate_systems_multiple
+>       - 7.1.camera_cirle
+>       - 7.2.camera_keyboard_dt
+>       - 7.4.camera_class
 >   - 2.lighting
 >       - 1.colors
 >       - 2.1.basic_lighting_diffuse
@@ -55,14 +55,25 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 5.3.light_casters_spot
 >       - 5.4.light_casters_spot_soft
 >       - 6.multiple_lights
+>       - 7.multiple_lights_plus
 >   - 3.model_loading
->       - 1.model_loading(为了之后加载obj模型，我用typescript写了一个只针对该教程中obj格式文件的解析函数)
+>       - 1.model_loading(为了之后加载obj模型，我用typescript写了一个只针对该教程中obj格式文件的解析函数,此处与原教程差别较大)
 >   - 4.advanced_opengl
 >       - 1.1.depth_testing
 >       - 1.2.depth_testing_view
 >       - 2.stencil_testing
 >       - 3.1.blending_discard
 >       - 3.2.blending_sort
-
+>       - 5.1.framebuffers
+>       - 5.2.framebuffers_inversion
+>       - 5.3.framebuffers_grayscale
+>       - 5.4.framebuffers_kernel_effects
+>       - 5.5.framebuffers_blur
+>       - 5.6.framebuffers_edge_detection
+>       - 5.7.framebuffers_exercise1
+>       - 6.1.cubemaps_skybox
+>       - 6.2.cubemaps_environment_mapping
+>       - 6.3.modeling_environment_mapping
+  
 ## 说明
 本项目仅供交流学习，不可用于其他用途，如果有人愿意提供宝贵的意见或建议，可联系本人，个人邮箱：850989926@qq.com（QQ）
