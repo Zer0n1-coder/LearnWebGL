@@ -76,6 +76,7 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 6.3.modeling_environment_mapping
 >       - 10.1.instancing
 >   - 5.advanced_lighting
+>       - 3.1.3.shadow_mapping
 >   - 7.in_practice(这是该教程的最后章节，根据目前更新的进度，已经能够完成一个完整的Breakout2D小游戏了，采用到的技术即目前的进度处的运用帧缓存进行后期处理以及之前的内容)
   
 ## 说明
