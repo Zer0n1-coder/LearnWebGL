@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>LearnWebGL</title>
+    <style type="text/css">
+        .container {
+            margin: 0 auto;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="wood" src="./wood.png" style="display :none" />
+    <div class="container">
+        <canvas id="webgl" width="800" height="600" align="center">
+            Please use a browser that supports "canvas"
+        </canvas>
+    </div>
+    <script type="module">
+        import { main } from './main'
+        main();
+    </script>
+</body>
+</html>
