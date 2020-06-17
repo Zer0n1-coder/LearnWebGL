@@ -57,7 +57,7 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 6.multiple_lights
 >       - 7.multiple_lights_plus
 >   - 3.model_loading
->       - 1.model_loading(为了之后加载obj模型，我用typescript写了一个只针对该教程中obj格式文件的解析函数,此处与原教程差别较大)
+>       - 1.model_loading(为了之后加载obj模型，我用typescript写了一个只针对该教程中obj格式文件的解析函数,此处与原教程差别较大,当前效果不理想，之后找时间重构)
 >   - 4.advanced_opengl
 >       - 1.1.depth_testing
 >       - 1.2.depth_testing_view
