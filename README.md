@@ -75,6 +75,7 @@ learnopengl.com系列教程的WebGL实现版本，本项目使用webgl+typescrip
 >       - 6.2.cubemaps_environment_mapping
 >       - 6.3.modeling_environment_mapping
 >       - 10.1.instancing
+>       - 11.1.anti_aliasing_msaa
 >   - 5.advanced_lighting
 >       - 1.advanced_lighting
 >       - 3.1.3.shadow_mapping
